@@ -1,0 +1,3 @@
+{
+	"entity-sync-debug.missing_entities": "Entity Sync Debug: %s server-tracked entities are missing on the client. Full details were written to the game log."
+}

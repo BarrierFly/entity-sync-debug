@@ -1,0 +1,3 @@
+{
+	"entity-sync-debug.missing_entities": "实体同步调试：客户端缺失 %s 个服务端正在追踪的实体，详细信息已写入游戏日志。"
+}

@@ -1,0 +1,30 @@
+{
+	"schemaVersion": 1,
+	"id": "entity-sync-debug",
+	"version": "${version}",
+	"name": "Entity Sync Debug",
+	"description": "Checks whether server-tracked entities are missing on the client in singleplayer. Missing entities are reported in chat and with full details in the game log.",
+	"authors": [
+		"peoplecanfly"
+	],
+	"license": "CC0-1.0",
+	"icon": "assets/entity-sync-debug/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"client": [
+			"peoplecanfly.entitysyncdebug.client.EntitySyncDebugClient"
+		]
+	},
+	"mixins": [
+		{
+			"config": "entity-sync-debug.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}

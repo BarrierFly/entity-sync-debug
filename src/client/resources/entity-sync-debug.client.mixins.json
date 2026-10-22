@@ -1,0 +1,14 @@
+{
+	"required": true,
+	"package": "peoplecanfly.entitysyncdebug.client.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"client": [
+		"EntityTrackerEntryMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
+}
