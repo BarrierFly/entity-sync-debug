@@ -21,8 +21,11 @@ A report with `client chunk loaded: false` usually points at a chunk loading/unl
 ## Commands
 
 - `/entitysyncdebug counts` — count server-side and client-side entities by type within the current singleplayer view distance. The output shows one line per type with both counts, highlights differences, and ends with a total.
+- `/entitysyncdebug counts dump` — run the same count and additionally force-send every entity that exists on the server in range but is absent on the client. Two seconds later the command verifies each forced entity on the client (presence and type), reports anomalies in chat, and writes details to the log.
 
 The command counts all loaded entities in range on each side, not only entities the server currently tracks. Counts can therefore differ for entity types whose tracking range is smaller than the view distance; use the automatic missing-entity report for the tracked-entity comparison.
+
+`dump` sends a one-shot spawn/data packet from the integrated server, bypassing normal tracking rules. For entities outside their normal tracking range this can create a client entity that will not receive further updates; it is intended as a diagnostic action.
 
 ## Requirements
 
@@ -51,3 +54,5 @@ The mod jar is written to `build/libs/entity-sync-debug-1.0.0.jar`.
 使用服务端追踪集合而不是简单按视距扫描，可以避免把“超出实体类型追踪范围、原版本来就不会同步”的实体误判为缺失。构建后 jar 位于 `build/libs/entity-sync-debug-1.0.0.jar`。
 
 命令 `/entitysyncdebug counts` 会按实体类型列出当前视距内服务端和客户端的实体数量及差值。该命令统计的是范围内所有已加载实体，因此某些类型（追踪范围小于视距）出现数量差属于正常现象；判断同步缺失请以自动检测为准。
+
+`/entitysyncdebug counts dump` 在此基础上会把服务端范围内、客户端缺失的实体强制同步一次（直接发送 spawn/数据包），2 秒后在客户端复核实体是否存在且类型一致；发送异常、复核仍缺失或类型不一致都会在聊天栏提示并写入日志。该操作绕过正常追踪规则，追踪范围之外的实体被同步后不会继续收到更新，仅用于诊断。

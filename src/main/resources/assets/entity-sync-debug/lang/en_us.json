@@ -9,5 +9,12 @@
 	"entity-sync-debug.counts.total_extra": "Total: server %s, client %s (extra %s)",
 	"entity-sync-debug.counts.empty": "No entities in range.",
 	"entity-sync-debug.counts.singleplayer_only": "This command is only available in singleplayer.",
-	"entity-sync-debug.counts.unavailable": "The integrated server world is not available yet."
+	"entity-sync-debug.counts.unavailable": "The integrated server world is not available yet.",
+	"entity-sync-debug.counts.dump.start": "Force-syncing %s missing entities to the client...",
+	"entity-sync-debug.counts.dump.none": "No missing entities to dump.",
+	"entity-sync-debug.counts.dump.success": "Dump complete: %s of %s entities verified on the client.",
+	"entity-sync-debug.counts.dump.anomalies": "Dump finished with %s anomalies (%s verified). See the game log for details.",
+	"entity-sync-debug.counts.dump.unavailable": "Dump aborted: the integrated server player or world is no longer available.",
+	"entity-sync-debug.counts.dump.failed": "Dump failed: an unexpected error occurred. See the game log for details.",
+	"entity-sync-debug.counts.dump.world_changed": "Dump verification skipped because the client world changed."
 }

@@ -9,5 +9,12 @@
 	"entity-sync-debug.counts.total_extra": "总计：服务端 %s，客户端 %s（多出 %s）",
 	"entity-sync-debug.counts.empty": "范围内没有实体。",
 	"entity-sync-debug.counts.singleplayer_only": "该命令仅在单人游戏中可用。",
-	"entity-sync-debug.counts.unavailable": "集成服务器世界尚不可用。"
+	"entity-sync-debug.counts.unavailable": "集成服务器世界尚不可用。",
+	"entity-sync-debug.counts.dump.start": "正在向客户端强制同步 %s 个缺失实体……",
+	"entity-sync-debug.counts.dump.none": "没有需要 dump 的缺失实体。",
+	"entity-sync-debug.counts.dump.success": "Dump 完成：已在客户端验证 %s/%s 个实体。",
+	"entity-sync-debug.counts.dump.anomalies": "Dump 结束，发现 %s 个异常（已验证 %s 个）。详细信息见游戏日志。",
+	"entity-sync-debug.counts.dump.unavailable": "Dump 中止：集成服务器玩家或世界已不可用。",
+	"entity-sync-debug.counts.dump.failed": "Dump 失败：发生未预期错误，详细信息见游戏日志。",
+	"entity-sync-debug.counts.dump.world_changed": "客户端世界已切换，跳过 dump 验证。"
 }
