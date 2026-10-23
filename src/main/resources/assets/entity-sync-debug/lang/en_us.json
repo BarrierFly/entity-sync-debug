@@ -1,3 +1,13 @@
 {
-	"entity-sync-debug.missing_entities": "Entity Sync Debug: %s server-tracked entities are missing on the client. Full details were written to the game log."
+	"entity-sync-debug.missing_entities": "Entity Sync Debug: %s server-tracked entities are missing on the client. Full details were written to the game log.",
+	"entity-sync-debug.counts.header": "Entity Sync Debug: counts in %s within %s blocks (%s chunks)",
+	"entity-sync-debug.counts.match": "%s: server %s, client %s",
+	"entity-sync-debug.counts.missing": "%s: server %s, client %s (missing %s)",
+	"entity-sync-debug.counts.extra": "%s: server %s, client %s (extra %s)",
+	"entity-sync-debug.counts.total_match": "Total: server %s, client %s",
+	"entity-sync-debug.counts.total_missing": "Total: server %s, client %s (missing %s)",
+	"entity-sync-debug.counts.total_extra": "Total: server %s, client %s (extra %s)",
+	"entity-sync-debug.counts.empty": "No entities in range.",
+	"entity-sync-debug.counts.singleplayer_only": "This command is only available in singleplayer.",
+	"entity-sync-debug.counts.unavailable": "The integrated server world is not available yet."
 }

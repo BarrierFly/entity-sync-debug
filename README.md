@@ -18,6 +18,12 @@ The mod does not simply compare every entity within the render distance. An enti
 
 A report with `client chunk loaded: false` usually points at a chunk loading/unloading edge case rather than a lost entity spawn packet.
 
+## Commands
+
+- `/entitysyncdebug counts` — count server-side and client-side entities by type within the current singleplayer view distance. The output shows one line per type with both counts, highlights differences, and ends with a total.
+
+The command counts all loaded entities in range on each side, not only entities the server currently tracks. Counts can therefore differ for entity types whose tracking range is smaller than the view distance; use the automatic missing-entity report for the tracked-entity comparison.
+
 ## Requirements
 
 - Minecraft 1.21.11
@@ -43,3 +49,5 @@ The mod jar is written to `build/libs/entity-sync-debug-1.0.0.jar`.
 在单人游戏（集成服务器）中，每秒比较一次“服务端已开始向本地玩家追踪的实体”和客户端实体表。若某个实体连续 2 秒在客户端缺失，会在聊天栏显示红色提示，并在游戏日志中输出维度、类型、UUID、实体 ID、坐标、距离、视距、实体追踪范围、客户端区块是否已加载等详细信息。
 
 使用服务端追踪集合而不是简单按视距扫描，可以避免把“超出实体类型追踪范围、原版本来就不会同步”的实体误判为缺失。构建后 jar 位于 `build/libs/entity-sync-debug-1.0.0.jar`。
+
+命令 `/entitysyncdebug counts` 会按实体类型列出当前视距内服务端和客户端的实体数量及差值。该命令统计的是范围内所有已加载实体，因此某些类型（追踪范围小于视距）出现数量差属于正常现象；判断同步缺失请以自动检测为准。

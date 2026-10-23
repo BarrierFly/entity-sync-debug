@@ -1,3 +1,13 @@
 {
-	"entity-sync-debug.missing_entities": "实体同步调试：客户端缺失 %s 个服务端正在追踪的实体，详细信息已写入游戏日志。"
+	"entity-sync-debug.missing_entities": "实体同步调试：客户端缺失 %s 个服务端正在追踪的实体，详细信息已写入游戏日志。",
+	"entity-sync-debug.counts.header": "实体同步调试：%s 中 %s 格（%s 区块）范围内的实体数量",
+	"entity-sync-debug.counts.match": "%s：服务端 %s，客户端 %s",
+	"entity-sync-debug.counts.missing": "%s：服务端 %s，客户端 %s（缺失 %s）",
+	"entity-sync-debug.counts.extra": "%s：服务端 %s，客户端 %s（多出 %s）",
+	"entity-sync-debug.counts.total_match": "总计：服务端 %s，客户端 %s",
+	"entity-sync-debug.counts.total_missing": "总计：服务端 %s，客户端 %s（缺失 %s）",
+	"entity-sync-debug.counts.total_extra": "总计：服务端 %s，客户端 %s（多出 %s）",
+	"entity-sync-debug.counts.empty": "范围内没有实体。",
+	"entity-sync-debug.counts.singleplayer_only": "该命令仅在单人游戏中可用。",
+	"entity-sync-debug.counts.unavailable": "集成服务器世界尚不可用。"
 }
